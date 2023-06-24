@@ -40,7 +40,7 @@ function Testimoni() {
             <div className="testimony__content--body--card--middle">
               <p className="desc">
                 “Wow... I am very happy to spend my whole day here. the Wi-fi is
-                good, and the coffee and meals tho. I like it here!! Very
+                good, and the foods and meals tho. I like it here!! Very
                 recommended!
               </p>
             </div>
@@ -96,8 +96,8 @@ function Testimoni() {
 
             <div className="testimony__content--body--card--middle">
               <p className="desc">
-                “This is very unusual for my taste, I haven’t liked coffee
-                before but their coffee is the best! and yup, you have to order
+                “This is very unusual for my taste, I haven’t liked foods
+                before but their foods is the best! and yup, you have to order
                 the chicken wings, the best in town!
               </p>
             </div>

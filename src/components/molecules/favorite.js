@@ -26,7 +26,7 @@ function Favorite() {
               >
                 <figure className="hazelnut">
                   <img
-                    src="assets/images/pexels-ge-yonk-1152077.jpg"
+                    src="assets/food-img/food-1.png"
                     alt="a"
                     className="hazelnut--image rounded-circle"
                   />
@@ -38,31 +38,31 @@ function Favorite() {
               <div className="list__info--content mt-4">
                 <div className="list list__info--content--inner">
                   <figure className="mb-0 rounded-circle">
-                    <img src="assets/images/icons/icon-check.svg" alt="t" />
+                    <img src="assets/food-img/icons/icon-check.svg" alt="t" />
                   </figure>
 
-                  <span>High quality beans</span>
+                  <span>High quality Foods </span>
                 </div>
                 <div className="list list__info--content--inner">
                   <figure className="mb-0 rounded-circle">
-                    <img src="assets/images/icons/icon-check.svg" alt="t" />
+                    <img src="assets/food-img/icons/icon-check.svg" alt="t" />
                   </figure>
 
-                  <span>High quality beans</span>
+                  <span>High quality Foods </span>
                 </div>
                 <div className="list list__info--content--inner">
                   <figure className="mb-0 rounded-circle">
-                    <img src="assets/images/icons/icon-check.svg" alt="t" />
+                    <img src="assets/food-img/icons/icon-check.svg" alt="t" />
                   </figure>
 
-                  <span>High quality beans</span>
+                  <span>High quality Foods </span>
                 </div>
                 <div className="list list__info--content--inner">
                   <figure className="mb-0 rounded-circle">
-                    <img src="assets/images/icons/icon-check.svg" alt="t" />
+                    <img src="assets/food-img/icons/icon-check.svg" alt="t" />
                   </figure>
 
-                  <span>High quality beans</span>
+                  <span>High quality Foods </span>
                 </div>
               </div>
 
@@ -91,7 +91,7 @@ function Favorite() {
               >
                 <figure className="hazelnut">
                   <img
-                    src="assets/images/Hazelnutt.png"
+                    src="assets/food-img/food-2.png"
                     alt="a"
                     className="hazelnut--image rounded-circle"
                   />
@@ -103,31 +103,31 @@ function Favorite() {
               <div className="list__info--content mt-4">
                 <div className="list list__info--content--inner">
                   <figure className="mb-0 rounded-circle">
-                    <img src="assets/images/icons/icon-check.svg" alt="t" />
+                    <img src="assets/food-img/icons/icon-check.svg" alt="t" />
                   </figure>
 
-                  <span>High quality beans</span>
+                  <span>High quality Foods </span>
                 </div>
                 <div className="list list__info--content--inner">
                   <figure className="mb-0 rounded-circle">
-                    <img src="assets/images/icons/icon-check.svg" alt="t" />
+                    <img src="assets/food-img/icons/icon-check.svg" alt="t" />
                   </figure>
 
-                  <span>High quality beans</span>
+                  <span>High quality Foods </span>
                 </div>
                 <div className="list list__info--content--inner">
                   <figure className="mb-0 rounded-circle">
-                    <img src="assets/images/icons/icon-check.svg" alt="t" />
+                    <img src="assets/food-img/icons/icon-check.svg" alt="t" />
                   </figure>
 
-                  <span>High quality beans</span>
+                  <span>High quality Foods </span>
                 </div>
                 <div className="list list__info--content--inner">
                   <figure className="mb-0 rounded-circle">
-                    <img src="assets/images/icons/icon-check.svg" alt="t" />
+                    <img src="assets/food-img/icons/icon-check.svg" alt="t" />
                   </figure>
 
-                  <span>High quality beans</span>
+                  <span>High quality Foods </span>
                 </div>
               </div>
 
@@ -156,7 +156,7 @@ function Favorite() {
               >
                 <figure className="hazelnut">
                   <img
-                    src="assets/images/Hazelnutt.png"
+                    src="assets/food-img/food-3.png"
                     alt="a"
                     className="hazelnut--image rounded-circle"
                   />
@@ -168,31 +168,31 @@ function Favorite() {
               <div className="list__info--content mt-4">
                 <div className="list list__info--content--inner">
                   <figure className="mb-0 rounded-circle">
-                    <img src="assets/images/icons/icon-check.svg" alt="t" />
+                    <img src="assets/food-img/icons/icon-check.svg" alt="t" />
                   </figure>
 
-                  <span>High quality beans</span>
+                  <span>High quality Foods </span>
                 </div>
                 <div className="list list__info--content--inner">
                   <figure className="mb-0 rounded-circle">
-                    <img src="assets/images/icons/icon-check.svg" alt="t" />
+                    <img src="assets/food-img/icons/icon-check.svg" alt="t" />
                   </figure>
 
-                  <span>High quality beans</span>
+                  <span>High quality Foods </span>
                 </div>
                 <div className="list list__info--content--inner">
                   <figure className="mb-0 rounded-circle">
-                    <img src="assets/images/icons/icon-check.svg" alt="t" />
+                    <img src="assets/food-img/icons/icon-check.svg" alt="t" />
                   </figure>
 
-                  <span>High quality beans</span>
+                  <span>High quality Foods </span>
                 </div>
                 <div className="list list__info--content--inner">
                   <figure className="mb-0 rounded-circle">
-                    <img src="assets/images/icons/icon-check.svg" alt="t" />
+                    <img src="assets/food-img/icons/icon-check.svg" alt="t" />
                   </figure>
 
-                  <span>High quality beans</span>
+                  <span>High quality Foods </span>
                 </div>
               </div>
 

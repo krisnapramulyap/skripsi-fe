@@ -13,8 +13,8 @@ export default function Home() {
     <>
       <HeaderComponent />
       <Hero />
-      <Teamwork />
-      <OurMap />
+      <Testimoni/>
+      <Favorite />
       <FooterComponent />
     </>
   );
