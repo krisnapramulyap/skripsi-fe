@@ -1,8 +1,8 @@
 import React, { Suspense, lazy } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 const Home = lazy(() => import("../pages/admin/product"));
-// const Product = lazy(() => import("../pages/admin/product"));
-// const LandingPage = lazy(() => import("../pages/landingpage"));
+const Promo = lazy(() => import("../pages/admin/promo"));
+const Dashboard = lazy(() => import("../pages/admin/dashboard"));
 
 // components
 
@@ -14,8 +14,10 @@ export default function Admin() {
       <Suspense fallback={renderLoader()}>
         <Switch>
           <Route path="/admin/product" exact component={Home} />
-          {/* <Route path="/admin/promo" exact component={Home} />
-          <Route path="/admin/dashboard" exact component={Home} /> */}
+          <Route path="/admin/product/:id" exact component={Home} />
+          <Route path="/admin/promo" exact component={Promo} />
+          <Route path="/admin/promo/:id" exact component={Promo} />
+          <Route path="/admin/dashboard" exact component={Dashboard} />
           {/* <Redirect from="/admin" to="/admin/product" /> */}
         </Switch>
       </Suspense>

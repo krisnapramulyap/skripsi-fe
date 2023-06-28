@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { FooterComponent, HeaderComponent } from "components/modules";
-import { useRouter } from "next/router";
+import { FooterComponent, HeaderComponent } from "../../../components/modules";
+import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { deleteToCart, clearCart } from "stores/action/addCart";
-import { getAllPromo } from "stores/action/promo";
-import { getDataCookie } from "middleware/authorizationPage";
-import axios from "utils/axios";
-import { formatRp } from "utils/formatRp";
+import { deleteToCart, clearCart } from "../../../stores/action/addCart";
+import { getAllPromo } from "../../../stores/action/promo";
+import { getDataCookie } from "../../../middleware/authorizationPage";
+import axios from "../../../utils/axios";
+import { formatRp } from "../../../utils/formatRp";
 
 export async function getServerSideProps(context) {
   const dataCookie = await getDataCookie(context);
@@ -25,12 +25,12 @@ export async function getServerSideProps(context) {
 }
 
 function Payment() {
-  const router = useRouter();
+  const router = useHistory();
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.addCart);
   const user = useSelector((state) => state.dataUserById);
   const promo = useSelector((state) => state.promo);
-
+  const [link, setLink] = useState("");
   const [valid, setValid] = useState(false);
   const [dataOrder, setDataOrder] = useState({
     idUser: user.user.id,
@@ -141,8 +141,9 @@ function Payment() {
     axios
       .post("/order", dataOrder)
       .then((res) => {
+        console.log(res);
         alert("Success order product");
-        router.push("/main/home");
+        setLink(res.data.data.urlRedirect);
         dispatch(clearCart());
       })
       .catch((err) => {
@@ -210,7 +211,7 @@ function Payment() {
                                   <img
                                     src={
                                       item.image
-                                        ? `${process.env.URL_BACKEND}/uploads/product/${item.image}`
+                                        ? `http://localhost:3001/uploads/product/${item.image}`
                                         : `/assets/images/default.png`
                                     }
                                     alt="z"
@@ -435,9 +436,12 @@ function Payment() {
                   </div>
                 </div>
 
-                <button className="btn__confirm w-100" onClick={postOrder}>
-                  Confirm and pay
+                <button className="btn__confirm w-100 mb-3" onClick={postOrder}>
+                  Confirm
                 </button>
+                <a href={link}>
+                  <button className="btn__confirm w-100">Payment</button>
+                </a>
               </div>
             </div>
           </div>

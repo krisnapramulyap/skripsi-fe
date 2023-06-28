@@ -3,13 +3,13 @@ import {
   HeaderComponent,
   FooterComponent,
   ErrorHandling,
-} from "components/modules";
+} from "../../../components/modules";
 import { useSelector, useDispatch } from "react-redux";
-import { getDataCookie } from "middleware/authorizationPage";
-import axios from "utils/axios";
-import { getUserById } from "stores/action/dataUser";
+import { getDataCookie } from "../../../middleware/authorizationPage";
+import axios from "../../../utils/axios";
+import { getUserById } from "../../../stores/action/dataUser"
 import { Modal, Button } from "react-bootstrap";
-import { InputAuthComponent } from "components/modules";
+import { InputAuthComponent } from "../../../components/modules";
 
 export async function getServerSideProps(context) {
   const dataCookie = await getDataCookie(context);

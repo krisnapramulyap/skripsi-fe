@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { HeaderComponent, FooterComponent } from "components/modules";
-import { useRouter } from "next/router";
-import { getDataCookie } from "middleware/authorizationPage";
-import { Line } from "react-chartjs-2";
+import { HeaderComponent, FooterComponent } from "../../../components/modules";
+import { useHistory } from "react-router-dom";
+import { getDataCookie } from "../../../middleware/authorizationPage";
+import { Line,Bar } from "react-chartjs-2";
 import Chart from "chart.js/auto";
-import axios from "utils/axios";
+import axios from "../../../utils/axios";
 import { useSelector } from "react-redux";
 
 export async function getServerSideProps(context) {
@@ -25,8 +25,7 @@ export async function getServerSideProps(context) {
 }
 
 function Dashboard() {
-  const router = useRouter();
-
+  const router = useHistory();
   const [data, setData] = useState({
     labels: [],
     datasets: [
@@ -91,7 +90,7 @@ function Dashboard() {
 
   const handleAuthorization = () => {
     if (user.role !== "admin") {
-      router.back();
+      router.push("/main/home");
     }
   };
 
@@ -100,9 +99,6 @@ function Dashboard() {
     getDashboard();
   }, [filter]);
 
-  // useEffect(() => {
-  //   getDashboard();
-  // }, [filter]);
 
   return (
     <>
@@ -127,7 +123,7 @@ function Dashboard() {
               </label>
             </div>
 
-            {/* <div className="form-check">
+            <div className="form-check">
               <input
                 className="form-check-input"
                 type="radio"
@@ -138,7 +134,7 @@ function Dashboard() {
               <label className="form-check-label" htmlFor="flexRadioDefault2">
                 Weekly
               </label>
-            </div> */}
+            </div>
 
             <div className="form-check">
               <input
@@ -159,15 +155,9 @@ function Dashboard() {
             {/* <span className="text-secondary rubik-400">Last 9 months</span> */}
 
             <div>
-              <Line data={data} options={options} />
+              <Bar data={data} options={options} />
             </div>
           </div>
-
-          {/* <div className="text-center">
-            <button className="dashboard__button nunito-700">
-              Download Report
-            </button>
-          </div> */}
         </div>
       </section>
       <FooterComponent />

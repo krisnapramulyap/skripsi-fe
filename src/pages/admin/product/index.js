@@ -11,6 +11,7 @@ import {
 } from "../../../stores/action/allProduct";
 import { getDataCookie } from "../../../middleware/authorizationPage";
 import { useSelector } from "react-redux";
+import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 
 export async function getServerSideProps(context) {
   const dataCookie = await getDataCookie(context);
@@ -48,6 +49,7 @@ const stateParams = {
 };
 
 function NewProduct() {
+  const { id } = useParams();
   const router = useHistory();
   const dispatch = useDispatch();
   const target = useRef(null);
@@ -77,23 +79,23 @@ function NewProduct() {
 
   useEffect(() => {
     handleAuthorization();
-    // if (router.query.id) {
-    //   dispatch(getProductById(router.query.id))
-    //     .then((res) => {
-    //       const newData = {
-    //         ...form,
-    //         name: res.value.data.data[0].name,
-    //         price: res.value.data.data[0].price,
-    //         category: res.value.data.data[0].category,
-    //         description: res.value.data.data[0].description,
-    //         size: res.value.data.data[0].size.split(","),
-    //         image: res.value.data.data[0].image,
-    //       };
+    if (id) {
+      dispatch(getProductById(id))
+        .then((res) => {
+          const newData = {
+            ...form,
+            name: res.value.data.data[0].name,
+            price: res.value.data.data[0].price,
+            category: res.value.data.data[0].category,
+            description: res.value.data.data[0].description,
+            size: res.value.data.data[0].size.split(","),
+            image: res.value.data.data[0].image,
+          };
 
-    //       setForm(newData);
-    //     })
-    //     .catch((err) => err.response.data.msg && alert(err.response.data.msg));
-    // }
+          setForm(newData);
+        })
+        .catch((err) => err.response.data.msg && alert(err.response.data.msg));
+    }
   }, [dispatch, selectSize, unSelected]);
 
   const handleChange = (e) => {
@@ -181,25 +183,25 @@ function NewProduct() {
       formData.append(data, newData[data]);
     }
 
-    // dispatch(updateProduct(router.query.id, formData))
-    //   .then((res) => {
-    //     setShow(true);
-    //     setNotif({ ...notif, success: res.value.data.msg });
+    dispatch(updateProduct(id, formData))
+      .then((res) => {
+        setShow(true);
+        setNotif({ ...notif, success: res.value.data.msg });
 
-    //     dispatch(
-    //       getAllProduct(
-    //         params.page,
-    //         params.limit,
-    //         params.category,
-    //         params.search,
-    //         params.sort,
-    //         params.order
-    //       )
-    //     );
-    //   })
-    //   .catch((err) => {
-    //     setNotif({ ...notif, err: err.response.data.msg });
-    //   });
+        dispatch(
+          getAllProduct(
+            params.page,
+            params.limit,
+            params.category,
+            params.search,
+            params.sort,
+            params.order
+          )
+        );
+      })
+      .catch((err) => {
+        setNotif({ ...notif, err: err.response.data.msg });
+      });
 
     resetForm();
   };
@@ -233,8 +235,7 @@ function NewProduct() {
                     <Link href="/main/home">Product</Link>
                   </li>
                   <li className="breadcrumb-item active">
-                    {/* {router.query.id ? "Update product" : "Add Product"} */}
-                    {"Add Product"}
+                    {id ? "Update product" : "Add Product"}
                   </li>
                 </ol>
               </nav>
@@ -283,11 +284,9 @@ function NewProduct() {
                   </button>
                   <button
                     className="btn__save d-block mb-3"
-                    // onClick={router.query.id ? handleUpdate : handleSubmit}
-                    onClick={handleSubmit}
+                    onClick={id ? handleUpdate : handleSubmit}
                   >
-                    {/* {router.query.id ? "Update Product" : "Save Product"} */}
-                    {"Save Product"}
+                    {id ? "Update Product" : "Save Product"}
                   </button>
                   <button className="btn__cancel d-block" onClick={resetForm}>
                     Cancel

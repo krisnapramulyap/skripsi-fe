@@ -62,7 +62,7 @@ function HeaderComponent(props) {
         <Modal.Header closeButton>
           <Modal.Title>No order</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Order first your favorit coffee or foods!</Modal.Body>
+        <Modal.Body>Order first your favorit foods!</Modal.Body>
         <Modal.Footer>
           <Button variant="primary" onClick={handleClose}>
             Ok
@@ -71,7 +71,7 @@ function HeaderComponent(props) {
       </Modal>
       <nav className="navbar navbar-expand-lg">
         <div className="container">
-          <a className="navbar-brand">ClothStore</a>
+          <a className="navbar-brand">RestoKrisna</a>
           <button
             className="navbar-toggler"
             type="button"

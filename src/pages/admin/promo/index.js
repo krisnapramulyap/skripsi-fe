@@ -1,16 +1,15 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { HeaderComponent, FooterComponent } from "components/modules";
-import { getDataCookie } from "middleware/authorizationPage";
+import { HeaderComponent, FooterComponent } from "../../../components/modules";
+import { getDataCookie } from "../../../middleware/authorizationPage";
 
-import Link from "next/link";
-import { useRouter } from "next/router";
+import { Link, useHistory, useParams } from "react-router-dom";
 import {
   getAllPromo,
   postPromo,
   updatePromo,
   getPromoById,
-} from "stores/action/promo";
+} from "../../../stores/action/promo";
 
 export async function getServerSideProps(context) {
   const dataCookie = await getDataCookie(context);
@@ -43,11 +42,12 @@ const initialState = {
 };
 
 function Promo() {
-  const router = useRouter();
+  const { id } = useParams();
+  const router = useHistory();
   const dispatch = useDispatch();
   const target = useRef(null);
 
-  const [idPromo, setIdPromo] = useState(router.query.id);
+  const [idPromo, setIdPromo] = useState(id);
   const [form, setForm] = useState(initialState);
   const [image, setImage] = useState("");
 
@@ -81,7 +81,7 @@ function Promo() {
 
   const handleAuthorization = () => {
     if (user.role !== "admin") {
-      router.back();
+      router.push("/main/home");
     }
   };
 
@@ -320,9 +320,9 @@ function Promo() {
 
                   <button
                     className="btn__save--promo d-block mb-3"
-                    onClick={router.query.id ? handleUpdate : handleSubmit}
+                    onClick={id ? handleUpdate : handleSubmit}
                   >
-                    {router.query.id ? "Update Promo" : "Save Promo"}
+                    {id ? "Update Promo" : "Save Promo"}
                   </button>
                   <button
                     className="btn__cancel--promo d-block"

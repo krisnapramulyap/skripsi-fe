@@ -3,11 +3,11 @@ import {
   ModalDelete,
   HeaderComponent,
   FooterComponent,
-} from "components/modules";
-import { getDataCookie } from "middleware/authorizationPage";
+} from "../../../../components/modules";
+import { getDataCookie } from "../../../../middleware/authorizationPage";
 import { useDispatch, useSelector } from "react-redux";
-import axios from "utils/axios";
-import { formatRp } from "utils/formatRp";
+import axios from "../../../../utils/axios";
+import { formatRp } from "../../../../utils/formatRp";
 
 export async function getServerSideProps(context) {
   const dataCookie = await getDataCookie(context);
@@ -103,7 +103,7 @@ function History() {
                     >
                       <div className="d-flex history__card">
                         <img
-                          src="/assets/images/img-history.png"
+                          src="/assets/images/logo buku.jpg"
                           alt="icon"
                           width="100px"
                         />
