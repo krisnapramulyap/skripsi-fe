@@ -48,7 +48,7 @@ const FormLoginComponent = (props) => {
   };
 
   return (
-    <div className="register-content">
+    <div className="register-content mt-5">
       <div
         className="
         register-content-header
@@ -57,6 +57,7 @@ const FormLoginComponent = (props) => {
         px-5
         py-4
         align-items-center
+        mt-5
       "
       >
         <div className="header-logo">
@@ -65,7 +66,7 @@ const FormLoginComponent = (props) => {
             alt="logo-header"
             className="logo-header"
           />
-          <span className="header-title ps-2">RestoKrisna</span>
+          <span className="header-title ps-2">Mie Ayam Kangen</span>
         </div>
         <div className="signup-logo">
           <span className="signup-title">Login</span>
@@ -115,7 +116,7 @@ const FormLoginComponent = (props) => {
           />
         </div>
       </div>
-      <FooterComponent />
+      {/* <FooterComponent /> */}
     </div>
   );
 };

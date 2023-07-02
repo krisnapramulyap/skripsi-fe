@@ -71,7 +71,7 @@ function HeaderComponent(props) {
       </Modal>
       <nav className="navbar navbar-expand-lg">
         <div className="container">
-          <a className="navbar-brand">RestoKrisna</a>
+          <a className="navbar-brand" href="/">Mie Ayam Kangen</a>
           <button
             className="navbar-toggler"
             type="button"

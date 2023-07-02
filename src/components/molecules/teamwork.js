@@ -2,7 +2,7 @@ import React from "react";
 
 function Teamwork() {
   return (
-    <section className="teamwork" style={{ marginBottom: "70px", marginTop:"10%" }}>
+    <section className="teamwork" style={{ marginBottom: "70px", marginTop:"7%" }}>
       <div className="container">
         <div className="row">
           <div className="col-12 col-lg-6">

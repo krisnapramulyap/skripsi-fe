@@ -32,7 +32,7 @@ function Favorite() {
                   />
                 </figure>
 
-                <div className="title mt-3">Dior</div>
+                <div className="title mt-3">Mie Ayam Komplit</div>
               </div>
 
               <div className="list__info--content mt-4">
@@ -75,7 +75,7 @@ function Favorite() {
             "
               >
                 <h5 className="list__info--content--price">
-                  {formatRp(25000)}
+                  {formatRp(20000)}
                 </h5>
                 <button className="btn__order">Order Now</button>
               </div>
@@ -97,7 +97,7 @@ function Favorite() {
                   />
                 </figure>
 
-                <div className="title mt-3">Hazelnut Latte</div>
+                <div className="title mt-3">Kwetiaw Komplit</div>
               </div>
 
               <div className="list__info--content mt-4">
@@ -140,7 +140,7 @@ function Favorite() {
             "
               >
                 <h5 className="list__info--content--price">
-                  {formatRp(25000)}
+                  {formatRp(20000)}
                 </h5>
                 <button className="btn__order">Order Now</button>
               </div>
@@ -162,7 +162,7 @@ function Favorite() {
                   />
                 </figure>
 
-                <div className="title mt-3">Hazelnut Latte</div>
+                <div className="title mt-3">Bihun Komplit</div>
               </div>
 
               <div className="list__info--content mt-4">
@@ -205,7 +205,7 @@ function Favorite() {
             "
               >
                 <h5 className="list__info--content--price">
-                  {formatRp(25000)}
+                  {formatRp(20000)}
                 </h5>
                 <button className="btn__order">Order Now</button>
               </div>
