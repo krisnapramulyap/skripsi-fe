@@ -1,4 +1,5 @@
 import { FooterComponent, HeaderComponent } from "../../components/modules";
+import { Carousel } from "../../components/Carousel/Carousel"
 import {
   Testimoni,
   OurMap,
@@ -12,7 +13,9 @@ export default function Home() {
   return (
     <>
       <HeaderComponent />
-      <Hero />
+      {/* <Hero /> */}
+      <Carousel/>
+      <Teamwork/>
       <Testimoni/>
       <Favorite />
       <FooterComponent />

@@ -2,7 +2,7 @@ import React from "react";
 
 function Testimoni() {
   return (
-    <section className="testimony" style={{ marginBottom: "70px" }}>
+    <section className="testimony" style={{ marginBottom: "70px", marginTop: "5%" }}>
       <div className="container">
         <div className="testimony__content--head">
           <h1>
