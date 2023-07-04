@@ -48,7 +48,7 @@ const FormLoginComponent = (props) => {
   };
 
   return (
-    <div className="register-content mt-5">
+    <div className="register-content ">
       <div
         className="
         register-content-header
@@ -61,11 +61,6 @@ const FormLoginComponent = (props) => {
       "
       >
         <div className="header-logo">
-          <img
-            src="/assets/images/coffee 1.png"
-            alt="logo-header"
-            className="logo-header"
-          />
           <span className="header-title ps-2">Mie Ayam Kangen</span>
         </div>
         <div className="signup-logo">
@@ -116,7 +111,6 @@ const FormLoginComponent = (props) => {
           />
         </div>
       </div>
-      {/* <FooterComponent /> */}
     </div>
   );
 };

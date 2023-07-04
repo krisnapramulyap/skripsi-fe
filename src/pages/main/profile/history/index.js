@@ -157,7 +157,7 @@ function History() {
         </div>
       </div>
 
-      <FooterComponent />
+      {/* <FooterComponent /> */}
 
       <ModalDelete
         show={show}

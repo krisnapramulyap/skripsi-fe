@@ -46,7 +46,7 @@ export default function FormRegisterComponent() {
   };
 
   return (
-    <div className="register-content mt-5">
+    <div className="register-content">
       <div
         className="
           register-content-header
@@ -55,15 +55,9 @@ export default function FormRegisterComponent() {
           px-5
           py-4
           align-items-center
-          mt-5
         "
       >
         <div className="header-logo">
-          <img
-            src="/assets/images/coffee 1.png"
-            alt="logo-header"
-            className="logo-header"
-          />
           <span className="header-title ps-2">Mie Ayam Kangen</span>
         </div>
         <div className="signup-logo">
