@@ -69,7 +69,7 @@ export default function MenuHomeComponent() {
   };
 
   const toEditPage = (id) => {
-    router.push({ pathname: `/admin/product`, query: { id } });
+    router.push({ pathname: `/admin/product/${id}` });
   };
 
   const handleCategory = (ctg) => {

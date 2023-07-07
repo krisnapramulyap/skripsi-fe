@@ -175,7 +175,7 @@ export default function UserLogin(props) {
         <img
           src={
             user.image
-              ? `${process.env.URL_BACKEND}/uploads/user/${user.image}`
+              ? `http://localhost:3001/uploads/user/${user.image}`
               : "/assets/images/default.png"
           }
           alt="user"

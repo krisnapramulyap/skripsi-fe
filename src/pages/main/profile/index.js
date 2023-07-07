@@ -245,7 +245,7 @@ function Profile() {
               <img
                 src={
                   user.user.image
-                    ? `${process.env.URL_BACKEND}/uploads/user/${user.user.image}`
+                    ? `http://localhost:3001/uploads/user/${user.user.image}`
                     : "/assets/images/default.png"
                 }
                 alt="profile"
