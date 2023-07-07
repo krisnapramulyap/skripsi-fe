@@ -11,7 +11,7 @@ export default function AutoCompleteItem({ data, onSelectItem, isActive }) {
           <img
             src={
               data.image
-                ? `${process.env.URL_BACKEND}/uploads/product/${data.image}`
+                ? `http://localhost:3001/uploads/product/${data.image}`
                 : "/assets/images/default.png"
             }
             alt="h"

@@ -30,7 +30,7 @@ export default function PromoHomeComponent() {
   // };
 
   const toUpdatePromo = (id) => {
-    router.push({ pathname: `/admin/promo`, query: { id } });
+    router.push({ pathname: `/admin/promo/${id}`});
   };
 
   const toAddPromo = () => {

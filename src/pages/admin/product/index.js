@@ -68,8 +68,8 @@ function NewProduct() {
     notif.success ? router.push("/main/home") : <></>;
   };
 
-  const inputSize = ["R", "L", "XL"];
-  const inputGram = ["250", "300", "500"];
+  const inputSize = ["Pedas", "Sedang", "Normal"];
+  const inputGram = ["dingin", "Hangat"];
 
   const handleAuthorization = () => {
     if (user.role !== "admin") {
@@ -250,7 +250,7 @@ function NewProduct() {
                               image
                                 ? image
                                 : form.image
-                                ? `${process.env.URL_BACKEND}/uploads/product/${form.image}`
+                                ? `http://localhost:3001/uploads/product/${form.image}`
                                 : "/assets/images/default.png"
                             }
                             alt="product image"
@@ -357,8 +357,8 @@ function NewProduct() {
                   </div>
 
                   <div className="form-group position-relative mb-0">
-                    <label htmlFor="size">Input product size:</label>
-                    <p>Click size you want to use for this product</p>
+                    <label htmlFor="size">Input product type:</label>
+                    <p>Click type you want to use for this product</p>
 
                     <div className="size__wrapper--info">
                       {inputSize?.map((item, index) => {
@@ -398,7 +398,7 @@ function NewProduct() {
                           >
                             <span className="span-size">
                               {item}
-                              <span className="text-center d-block">gr</span>
+                          
                             </span>
                           </div>
                         );

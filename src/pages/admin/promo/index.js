@@ -178,7 +178,7 @@ function Promo() {
                               image
                                 ? image
                                 : form.image
-                                ? `${process.env.URL_BACKEND}/uploads/promo/${form.image}`
+                                ? `http://localhost:3001/uploads/promo/${form.image}`
                                 : "/assets/images/default.png"
                             }
                             alt="promo"
