@@ -27,12 +27,16 @@ export async function getServerSideProps(context) {
   };
 }
 
+
+
+
 const date = new Date().toISOString().split("T")[0];
 
 function Profile() {
   const inputFile = useRef(null);
   const user = useSelector((state) => state.dataUserById);
   const dispatch = useDispatch();
+
 
   const [dataUser, setDataUser] = useState({
     firstName: user.user.firstName,
@@ -59,6 +63,9 @@ function Profile() {
   const onButtonClick = () => {
     inputFile.current.click();
   };
+
+
+
 
   const handleUpdateImage = () => {
     if (image === null || !image.image) {

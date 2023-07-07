@@ -18,7 +18,7 @@ export default function Admin() {
           <Route path="/admin/promo" exact component={Promo} />
           <Route path="/admin/promo/:id" exact component={Promo} />
           <Route path="/admin/dashboard" exact component={Dashboard} />
-          {/* <Redirect from="/admin" to="/admin/product" /> */}
+          <Redirect from="/admin" to="/admin/product" />
         </Switch>
       </Suspense>
     </>
