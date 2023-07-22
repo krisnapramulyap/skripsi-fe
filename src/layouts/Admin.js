@@ -3,7 +3,7 @@ import { Switch, Route, Redirect } from "react-router-dom";
 const Home = lazy(() => import("../pages/admin/product"));
 const Promo = lazy(() => import("../pages/admin/promo"));
 const Dashboard = lazy(() => import("../pages/admin/dashboard"));
-
+const Order = lazy(() => import("../pages/admin/order/order"));
 // components
 
 export default function Admin() {
@@ -13,6 +13,7 @@ export default function Admin() {
     <>
       <Suspense fallback={renderLoader()}>
         <Switch>
+          <Route path="/admin/order" exact component={Order}/>
           <Route path="/admin/product" exact component={Home} />
           <Route path="/admin/product/:id" exact component={Home} />
           <Route path="/admin/promo" exact component={Promo} />

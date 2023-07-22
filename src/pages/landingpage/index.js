@@ -13,7 +13,6 @@ export default function Home() {
   return (
     <>
       <HeaderComponent />
-      {/* <Hero /> */}
       <Carousel/>
       <Teamwork/>
       <Testimoni/>

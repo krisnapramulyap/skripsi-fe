@@ -35,7 +35,7 @@ function Payment() {
   const [dataOrder, setDataOrder] = useState({
     idUser: user.user.id,
     paymentMethod: "",
-    paymentStatus: "success",
+    paymentStatus: "pending",
     idPromo: null,
     tax: 0,
     subTotal: 0,

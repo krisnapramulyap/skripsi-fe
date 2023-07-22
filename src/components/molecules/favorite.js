@@ -7,7 +7,7 @@ function Favorite() {
       <div className="container">
         <div className="favorite__content">
           <div className="favorite__content--head">
-            <h1>Here is People’s Favorite</h1>
+            <h1>Product Favorite Customers</h1>
             <p>
               Let’s choose and have a bit taste of poeple’s favorite. It might
               be yours too!
@@ -41,28 +41,27 @@ function Favorite() {
                     <img src="assets/food-img/icons/icon-check.svg" alt="t" />
                   </figure>
 
-                  <span>High quality Foods </span>
+                  <span>Authentic Taste</span>
                 </div>
                 <div className="list list__info--content--inner">
                   <figure className="mb-0 rounded-circle">
                     <img src="assets/food-img/icons/icon-check.svg" alt="t" />
                   </figure>
 
-                  <span>High quality Foods </span>
+                  <span>High Quality Foods</span>
                 </div>
                 <div className="list list__info--content--inner">
                   <figure className="mb-0 rounded-circle">
                     <img src="assets/food-img/icons/icon-check.svg" alt="t" />
                   </figure>
 
-                  <span>High quality Foods </span>
+                  <span>Low Price Foods</span>
                 </div>
                 <div className="list list__info--content--inner">
                   <figure className="mb-0 rounded-circle">
                     <img src="assets/food-img/icons/icon-check.svg" alt="t" />
                   </figure>
-
-                  <span>High quality Foods </span>
+                  <span>Favorite Foods </span>
                 </div>
               </div>
 
@@ -106,28 +105,28 @@ function Favorite() {
                     <img src="assets/food-img/icons/icon-check.svg" alt="t" />
                   </figure>
 
-                  <span>High quality Foods </span>
+                  <span>Authentic Taste </span>
                 </div>
                 <div className="list list__info--content--inner">
                   <figure className="mb-0 rounded-circle">
                     <img src="assets/food-img/icons/icon-check.svg" alt="t" />
                   </figure>
 
-                  <span>High quality Foods </span>
+                  <span>High Quality Foods </span>
                 </div>
                 <div className="list list__info--content--inner">
                   <figure className="mb-0 rounded-circle">
                     <img src="assets/food-img/icons/icon-check.svg" alt="t" />
                   </figure>
 
-                  <span>High quality Foods </span>
+                  <span>Low Price Foods </span>
                 </div>
                 <div className="list list__info--content--inner">
                   <figure className="mb-0 rounded-circle">
                     <img src="assets/food-img/icons/icon-check.svg" alt="t" />
                   </figure>
 
-                  <span>High quality Foods </span>
+                  <span>Favorite Foods </span>
                 </div>
               </div>
 
@@ -171,28 +170,28 @@ function Favorite() {
                     <img src="assets/food-img/icons/icon-check.svg" alt="t" />
                   </figure>
 
-                  <span>High quality Foods </span>
+                  <span>Authentic Taste </span>
                 </div>
                 <div className="list list__info--content--inner">
                   <figure className="mb-0 rounded-circle">
                     <img src="assets/food-img/icons/icon-check.svg" alt="t" />
                   </figure>
 
-                  <span>High quality Foods </span>
+                  <span>High Quality Foods </span>
                 </div>
                 <div className="list list__info--content--inner">
                   <figure className="mb-0 rounded-circle">
                     <img src="assets/food-img/icons/icon-check.svg" alt="t" />
                   </figure>
 
-                  <span>High quality Foods </span>
+                  <span>Low Price Foods </span>
                 </div>
                 <div className="list list__info--content--inner">
                   <figure className="mb-0 rounded-circle">
                     <img src="assets/food-img/icons/icon-check.svg" alt="t" />
                   </figure>
 
-                  <span>High quality Foods </span>
+                  <span>Favorite Foods </span>
                 </div>
               </div>
 

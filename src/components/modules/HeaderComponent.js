@@ -108,7 +108,18 @@ function HeaderComponent(props) {
 
                   {user.role === "admin" ? (
                     <>
-                      <li className="nav-item pe-0">
+                                <li className="nav-item pe-0">
+                        <a
+                          style={{ cursor: "pointer" }}
+                          className={`nav-link${activeClass(
+                            "/admin/order"
+                          )}`}
+                          onClick={() => router.push("/admin/order")}
+                        >
+                          Order
+                        </a>
+                      </li>
+                      <li className="nav-item pe-1 mx-5">
                         <a
                           style={{ cursor: "pointer" }}
                           className={`nav-link${activeClass(

@@ -6,8 +6,8 @@ function Testimoni() {
       <div className="container">
         <div className="testimony__content--head">
           <h1>
-            Loved by Thousands of{" "}
-            <span className="d-block">Happy Customer</span>
+            Beberapa Testimoni Dari{" "}
+            <span className="d-block">Loyal Customers</span>
           </h1>
           <p>
             These are the stories of our customers who have visited us with
@@ -24,12 +24,12 @@ function Testimoni() {
                 </figure>
 
                 <div className="wrapper__data--content">
-                  <h6>Viezh Robert</h6>
-                  <p>Warsaw, Poland</p>
+                  <h6>Ridhwan Tsalasah</h6>
+                  <p>Jakarta, Indonesia</p>
                 </div>
               </div>
               <div className="start__wrapper">
-                <span>4.5</span>
+                <span>4.7</span>
 
                 <figure>
                   <img src="assets/images/icons/icon-star.svg" alt="t" />
@@ -53,12 +53,12 @@ function Testimoni() {
                 </figure>
 
                 <div className="wrapper__data--content">
-                  <h6>Yessica Christy</h6>
-                  <p>Shanxi, China</p>
+                  <h6>Ahmad Rafli</h6>
+                  <p>Jakarta, Indonesia</p>
                 </div>
               </div>
               <div className="start__wrapper">
-                <span>4.5</span>
+                <span>4.6</span>
 
                 <figure>
                   <img src="assets/images/icons/icon-star.svg" alt="t" />
@@ -81,8 +81,8 @@ function Testimoni() {
                 </figure>
 
                 <div className="wrapper__data--content">
-                  <h6>Kim Young Jou</h6>
-                  <p>Seoul, South Korea</p>
+                  <h6>Rici</h6>
+                  <p>Jakarta, Indonesia</p>
                 </div>
               </div>
               <div className="start__wrapper">

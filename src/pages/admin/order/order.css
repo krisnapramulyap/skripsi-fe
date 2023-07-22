@@ -1,0 +1,74 @@
+.Textdaftar {
+    position: absolute;
+    width: 171px;
+    height: 34px;
+    left: 634px;
+    top: 120px;
+    font-style: normal;
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 140%;
+    text-align: center;
+    color: #000000;
+}
+
+.Tabel {
+    position: absolute;
+    width: 1248px;
+    height: 288px;
+    left: 96px;
+    top: 194px;
+    background: #FFFFFF;
+    border: 1px solid #FCFCFC;
+    border-radius: 4px;
+
+    
+}
+
+.tabelcolour {
+    background-color: #008864;
+    align-items: center;
+    text-align: center;
+    color: #FCFCFC;
+    font-style: normal;
+    font-size: 12px;
+    font-weight: medium;
+    line-height: 150%;
+    border:#FCFCFC solid 1px;
+}
+
+.antri {
+    width: 92px;
+    height: 36px;
+}
+
+.pasien {
+    width: 224px;
+    height: 36px;
+}
+
+.poli {
+    width: 120px;
+    height: 36px;
+}
+
+.dokter {
+    width: 224px;
+    height: 36px;
+}
+
+.tgl {
+    width: 120px;
+    height: 36px;
+}
+
+.ket {
+    width: 362px;
+    height: 36px;
+}
+
+.selesai {
+    width: 105px;
+    height: 36px;
+}

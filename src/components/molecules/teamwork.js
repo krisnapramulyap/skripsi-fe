@@ -20,8 +20,8 @@ function Teamwork() {
           <div className="col-12 col-lg-6">
             <div className="teamwork__content--right">
               <h1>
-                We Provide Good Stuff
-                <span className="d-md-block"> and Healthy Meals</span>
+                Menggunakan Bahan Terbaik
+                <span className="d-md-block"> dan Berkualitas Tinggi</span>
               </h1>
 
               <p>
@@ -41,9 +41,9 @@ function Teamwork() {
                     />
                   </figure>
 
-                  <span>High quality Meat, fish and more..</span>
+                  <span>Menggunakan Ayam Berkualitas Terbaik dan Segar.</span>
                 </div>
-                {/* <div className="list__item">
+                <div className="list__item">
                   <figure className="mb-0 rounded-circle">
                     <img
                       src="assets/images/icons/icon-check.svg"
@@ -52,8 +52,8 @@ function Teamwork() {
                     />
                   </figure>
 
-                  <span>Healthy meals, you can request the ingredients</span>
-                </div> */}
+                  <span>Diproses Dengan Higenitas Tinggi. </span>
+                </div>
                 <div className="list__item">
                   <figure className="mb-0 rounded-circle">
                     <img
@@ -64,7 +64,7 @@ function Teamwork() {
                   </figure>
 
                   <span>
-                    Chat with our staff to get better experience for ordering
+                    Dapatkan Promo Menarik Dengan Bergabung Menjadi Member.
                   </span>
                 </div>
                 <div className="list__item">
@@ -77,7 +77,7 @@ function Teamwork() {
                   </figure>
 
                   <span>
-                    Free member card with a minimum purchase of IDR 40.000.
+                    Menggunakan Rempah Dengan Kualitas No 1.
                   </span>
                 </div>
               </div>
