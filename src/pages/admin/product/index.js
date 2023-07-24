@@ -55,7 +55,6 @@ function NewProduct() {
   const target = useRef(null);
   const [notif, setNotif] = useState({ err: "", success: "" });
   const { user } = useSelector((state) => state.dataUserById);
-
   const [form, setForm] = useState(initialState);
   const [params, setParams] = useState(stateParams);
   const [image, setImage] = useState("");

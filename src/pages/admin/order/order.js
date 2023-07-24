@@ -8,10 +8,8 @@ import "./order.css"
 
 
 export default function BerandaAdmin() {
-
-  const params = useParams();
+  const { id } = useParams();
   const [order, setOrder] = useState();
-  const [book, setBook] = useState({});
   const [isLoggedIn, setIsLoggedIn] = useState(true);
   const [errorResponse, setErrorResponse] = useState({
     isError: false,
@@ -33,51 +31,47 @@ export default function BerandaAdmin() {
   };
   
 
+ 
+  const onUpdate = async (e, id, data, paymentStatus) => {
+
+
+    try {
+      const token = localStorage.getItem("token");
+      const queueToUpdatePayload = {
+        paymentStatus : paymentStatus,
+      };
+
+      const updateRequest = await axios.patch(
+        `http://localhost:3001/order/8995a7f3-98e9-4c15-9d1b-f0e19a349970`, data,
+        queueToUpdatePayload,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+
+      const updateResponse = await updateRequest.data;
+      console.log(updateResponse)
+
+      console.log(updateResponse.status)
+      if (updateResponse.status);
+
+
+
+    } catch (err) {
+      const response = err.response.data;
+      setErrorResponse({
+        isError: true,
+        message: response.message,
+      });
+    }
+  };
+
   useEffect(() => {
     orderData();
+    onUpdate();
   }, []);
-
-  // const onUpdate = async (e, id, isDone) => {
-  //   e.preventDefault();
-
-  //   try {
-  //     const token = localStorage.getItem("token");
-  //     const queueToUpdatePayload = {
-  //       isDone: isDone,
-  //     };
-
-  //     const updateRequest = await axios.put(
-  //       `https://mediq-backend.herokuapp.com/api/admins/update-booking/${id}`,
-  //       queueToUpdatePayload,
-  //       {
-  //         headers: {
-  //           Authorization: `Bearer ${token}`,
-  //         },
-  //       }
-  //     );
-  //     console.log(params.id)
-
-  //     const updateResponse = await updateRequest.data;
-  //     console.log(updateResponse)
-
-  //     console.log(updateResponse.status)
-  //     if (updateResponse.status);
-
-
-
-  //   } catch (err) {
-  //     const response = err.response.data;
-  //     setErrorResponse({
-  //       isError: true,
-  //       message: response.message,
-  //     });
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   onUpdate();
-  //   bookData();
-  // }, [book.id]);
 
 
   return (
@@ -86,21 +80,19 @@ export default function BerandaAdmin() {
     <div>
       {/* <AdminNavbar /> */}
       <div className="Container">
-
         <div className="Textdaftar">
           <h4>Daftar Order</h4>
-
         </div>
-        <Table className="Tabel" striped bordered hover size="sm">
+<div>
+        <Table className="Tabel" striped bordered hover size="lg">
           <thead>
-            <tr className='tabelcolour'>
+            <tr className='tabelcolour mt-3'>
               <th className='antri'>No.Inovice</th>
               <th className='pasien'>Nama Pelanggan</th>
               <th className='tgl'>Nama Order</th>
               <th className='ket'>Jumlah</th>
-              <th className='ket'>Keterangan</th>
-
-              <th className='selesai'>Status Order</th>
+              <th className='ket'>Status Order</th>
+              <th className='selesai'>Change Status</th>
             </tr>
             </thead>
           {order ? (
@@ -113,13 +105,14 @@ export default function BerandaAdmin() {
                       <td style={{ textAlign: 'center' }}>{book.name}</td>
                       <td style={{ textAlign: 'center' }}>{book.qty}</td>
                       <td style={{ textAlign: 'center' }}>{book.paymentStatus}</td>
-                      <td><Button onClick={(e) => (e, book.id, true)} variant="link">Edit</Button></td>
+                      <td><Button onClick={(e) => onUpdate(e, book.id, "success")} variant="link">Edit</Button></td>
                     </tr>
                 )
-              })}
+              }).reverse()}
             </tbody>
           ) : ("")}
         </Table>
+        </div>
       </div>
       <hr style={{ marginTop: '2200px' }} />
       {/* <FooterHome /> */}

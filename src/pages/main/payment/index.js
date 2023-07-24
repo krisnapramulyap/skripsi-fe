@@ -436,7 +436,7 @@ function Payment() {
                   </div>
                 </div>
 
-                <button className="btn__confirm w-100 mb-3" onClick={postOrder}>
+                <button  className="btn__confirm w-100 mb-3" onClick={postOrder} href={link}>
                   Confirm
                 </button>
                 <a href={link}>

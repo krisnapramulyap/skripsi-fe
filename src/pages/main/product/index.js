@@ -160,12 +160,14 @@ export default function DetailProduct() {
             <div className="col-12 col-lg-8">
               <div className="detail__product--right">
                 <div className="detail__product--right--desc mx-md-auto">
-                  <p>{dataProduct.description}</p>
+                  
+                <h3 className="choose__size mb-5">Product Description</h3>
+                  <p className="mb-5">{dataProduct.description}</p>
 
-                  <div className="choose__size">
-                    <h5>Choose a size</h5>
+                  <div className="choose__size mb-4">
+                    <h3>Select Category</h3>
 
-                    <div className="size__wrapper--info">
+                    <div className="size__wrapper--info mt-4">
                       {dataProduct.size?.length > 0 ? (
                         <>
                           {dataProduct.size?.map((item, index) => (
@@ -234,9 +236,9 @@ export default function DetailProduct() {
                     </div>
 
                     <div className="checkout">
-                      <h3 onClick={yourCart}>Checkout</h3>
+                      <h3 >Checkout</h3>
 
-                      <figure className="arr rounded-circle">
+                      <figure className="arr rounded-circle"  onClick={distpatchCart}>
                         <img
                           src="/assets/images/icons/icon-arr-right.svg"
                           alt="arr"

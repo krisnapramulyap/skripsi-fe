@@ -34,6 +34,8 @@ const FormLoginComponent = (props) => {
     axios
       .post("/auth/login", formLogin)
       .then((res) => {
+        localStorage.setItem("token", res.data.data.token);
+        localStorage.setItem("id", res.data.data.id);
         Cookie.set("token", res.data.data.token);
         Cookie.set("id", res.data.data.id);
         props.getUserById(res.data.data.id);
