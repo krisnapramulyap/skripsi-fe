@@ -105,7 +105,7 @@ export default function BerandaAdmin() {
                       <td style={{ textAlign: 'center' }}>{book.name}</td>
                       <td style={{ textAlign: 'center' }}>{book.qty}</td>
                       <td style={{ textAlign: 'center' }}>{book.paymentStatus}</td>
-                      <td><Button onClick={(e) => onUpdate(e, book.id, "success")} variant="link">Edit</Button></td>
+                      <td><Button onClick={(e) => onUpdate(e, book.id, "success")} variant="link">ubah</Button></td>
                     </tr>
                 )
               }).reverse()}

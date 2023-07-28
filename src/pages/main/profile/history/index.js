@@ -111,7 +111,7 @@ function History() {
                         </div>
                       </div>
                     </div>
-                  )).reverse()}
+                  ))}
                 </div>
               </>
             ) : (
